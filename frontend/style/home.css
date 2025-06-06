@@ -1,0 +1,181 @@
+/* Reset de márgenes y paddings para asegurar consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffffff, #c0cfcc);
+    color: #333;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 120px;  /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 20px;
+}
+
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.header .btn-logout {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header .btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo de los filtros */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.filters .search-input,
+.filters .filter-select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 48%;
+    transition: border-color 0.3s ease;
+}
+
+.filters .search-input:focus,
+.filters .filter-select:focus {
+    border-color: #2980b9;
+}
+
+.filters .btn-search {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters .btn-search:hover {
+    background-color: #3498db;
+}
+
+/* Estilo para la tabla */
+.tesis-container {
+    overflow-x: auto;
+}
+
+.tesis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tesis-table th,
+.tesis-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tesis-table th {
+    background-color: #34495e;
+    color: white;
+}
+
+.tesis-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tesis-table td a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tesis-table td a:hover {
+    color: #3498db;
+}
+
+.tesis-table tbody tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Estilo general de enlaces */
+a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters .search-input,
+    .filters .filter-select,
+    .filters .btn-search {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tesis-table th,
+    .tesis-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .tesis-table td a {
+        font-size: 14px;
+    }
+}

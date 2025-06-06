@@ -1,0 +1,231 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 60px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(52 203 179 / 80%), 0 0 25px rgb(8 48 121 / 60%), 0 0 35px rgb(42 77 143 / 40%);
+    animation: fadeIn 0.8s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1e3c72;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Texto */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Grupo de entrada */
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1e3c72;
+    font-size: 18px;
+}
+
+/* Campos de entrada */
+form input {
+    padding: 14px 14px 14px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+    transition: 0.3s;
+    outline: none;
+    text-align: left;
+    width: 100%;
+}
+
+/* Alineación del placeholder */
+form input::placeholder {
+    text-align: left;
+}
+
+/* Campos de entrada en foco */
+form input:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 8px rgba(30, 60, 114, 0.4);
+}
+
+/* === ESTILOS PARA SELECT === */
+
+.select-container {
+    position: relative;
+}
+
+.select-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 14px 40px 14px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-container select:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 8px rgba(30, 60, 114, 0.4);
+}
+
+.select-container::after {
+    content: '▼';
+    font-size: 14px;
+    color: #1e3c72;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Enlace de "Olvidé mi contraseña" */
+.forgot-password {
+    color: #1e3c72;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #2a5298;
+}
+
+/* Botón de inicio de sesión */
+button {
+    background: #1e3c72;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+button:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de registro */
+.register-btn {
+    background: none;
+    color: #1e3c72;
+    padding: 12px;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.register-btn:hover {
+    background: #1e3c72;
+    color: white;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .input-group i {
+        left: 15px;
+        font-size: 16px;
+    }
+
+    form input {
+        padding: 14px 14px 14px 35px;
+    }
+
+    .select-container select {
+        padding: 14px 40px 14px 35px;
+    }
+
+    button, .register-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        max-width: 360px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AISCloud</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="logo">AISCloud</h1>
+        <p>Accede a tu cuenta para continuar</p>
+
+        <!-- Mensajes de error o éxito -->
+        <div id="message"></div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <button type="submit" class="submit-btn">Iniciar sesión</button>
+        </form>
+        
+
+        <button class="register-btn" onclick="window.location.href = '/register'">Crear cuenta</button>
+    </div>
+
+    <script src="index.js" defer></script>
+
+</body>
+</html>

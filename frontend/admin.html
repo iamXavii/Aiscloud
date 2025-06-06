@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administrador - Repositorio UNERG</title>
+  <link rel="stylesheet" href="style/admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <img src="img/Logo.png" alt="Logo UNERG" class="logo">
+      <h2>Admin UNERG</h2>
+      <nav>
+        <ul>
+          <li data-tab="tesis" class="active">Gestión de Tesis</li>
+          <li data-tab="usuarios">Gestión de Usuarios</li>
+          <li data-tab="subida">Subir Tesis</li>
+          <li data-tab="estadisticas">Estadísticas</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="tesis" class="tab active">
+        <h2>Gestión de Tesis</h2>
+        <!-- Aquí irá una tabla o tarjetas de tesis -->
+      </section>
+
+      <section id="usuarios" class="tab">
+        <h2>Gestión de Usuarios</h2>
+        <!-- Aquí irá una tabla de usuarios registrados -->
+      </section>
+
+      <section id="subida" class="tab">
+        <h2>Subir Nueva Tesis</h2>
+        <form id="formTesis">
+          <input type="text" placeholder="Título" required>
+          <input type="text" placeholder="Autor" required>
+          <input type="text" placeholder="Carrera" required>
+          <input type="number" placeholder="Año" required>
+          <input type="text" placeholder="Palabras clave (separadas por coma)" required>
+          <textarea placeholder="Descripción" required></textarea>
+          <input type="file" accept="application/pdf" required>
+          <button type="submit">Subir Tesis</button>
+        </form>
+      </section>
+
+      <section id="estadisticas" class="tab">
+        <h2>Estadísticas</h2>
+        <!-- Aquí irían gráficos, contadores, etc. -->
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const menuItems = document.querySelectorAll(".sidebar nav ul li");
+    const tabs = document.querySelectorAll(".tab");
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        menuItems.forEach(i => i.classList.remove("active"));
+        tabs.forEach(t => t.classList.remove("active"));
+
+        item.classList.add("active");
+        document.getElementById(item.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

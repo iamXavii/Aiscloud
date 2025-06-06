@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - AISCloud</title>
+    <link rel="stylesheet" href="style/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="logo">AISCloud</h1>
+        <p>Completa tus datos para crear tu cuenta</p>
+
+        <!-- Mensajes de error o éxito -->
+        <div id="message"></div>
+
+        <!-- Formulario de registro -->
+        <form id="register-form">
+
+            <div class="input-group">
+                <input type="text" id="cedula" placeholder="Cédula" required>
+                <i class="fas fa-id-card"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Nombres" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="lastName" placeholder="Apellidos" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <!-- Sede y Carrera combinados -->
+            <div class="select-container">
+                <select id="sede-carrera" required>
+                    <option value="" disabled selected>Selecciona tu Sede y Carrera</option>
+                    <!-- San Juan de los Morros -->
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería Agronómica de Producción Animal">San Juan de los Morros - Ingeniería Agronómica de Producción Animal</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería Agronómica de Producción Vegetal">San Juan de los Morros - Ingeniería Agronómica de Producción Vegetal</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Medicina">San Juan de los Morros - Medicina</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Enfermería">San Juan de los Morros - Enfermería</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Radiodiagnóstico e Imagenología">San Juan de los Morros - Radiodiagnóstico e Imagenología</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Medicina Veterinaria">San Juan de los Morros - Medicina Veterinaria</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Odontología">San Juan de los Morros - Odontología</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Licenciatura en Educación Integral">San Juan de los Morros - Licenciatura en Educación Integral</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Licenciatura en Educación Mención Computación">San Juan de los Morros - Licenciatura en Educación Mención Computación</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Licenciatura en Historia">San Juan de los Morros - Licenciatura en Historia</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Administración Comercial">San Juan de los Morros - Administración Comercial</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Contaduría Pública">San Juan de los Morros - Contaduría Pública</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Economía">San Juan de los Morros - Economía</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Comunicación Social">San Juan de los Morros - Comunicación Social</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería en Informática">San Juan de los Morros - Ingeniería en Informática</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería Electrónica">San Juan de los Morros - Ingeniería Electrónica</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería Civil">San Juan de los Morros - Ingeniería Civil</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería en Hidrocarburos, Mención Petróleo">San Juan de los Morros - Ingeniería en Hidrocarburos, Mención Petróleo</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Ingeniería en Hidrocarburos, Mención Gas">San Juan de los Morros - Ingeniería en Hidrocarburos, Mención Gas</option>
+                    <option class="San Juan de los Morros" value="San Juan de los Morros - Derecho">San Juan de los Morros - Derecho</option>
+                    <!-- Zaraza -->
+                    <option class="Zaraza" value="Zaraza - Ingeniería Agronómica de Producción Animal">Zaraza - Ingeniería Agronómica de Producción Animal</option>
+                    <option class="Zaraza" value="Zaraza - Ingeniería Agronómica de Producción Vegetal">Zaraza - Ingeniería Agronómica de Producción Vegetal</option>
+                    <option class="Zaraza" value="Zaraza - Medicina Veterinaria">Zaraza - Medicina Veterinaria</option>
+                    <option class="Zaraza" value="Zaraza - Ingeniería en Informática">Zaraza - Ingeniería en Informática</option>
+                    <!-- Maturín -->
+                    <option class="Maturín" value="Maturín - Medicina">Maturín - Medicina</option>
+                    <option class="Maturín" value="Maturín - Enfermería">Maturín - Enfermería</option>
+                    <option class="Maturín" value="Maturín - Fisioterapia">Maturín - Fisioterapia</option>
+                    <option class="Maturín" value="Maturín - Radiodiagnóstico">Maturín - Radiodiagnóstico</option>
+                    <option class="Maturín" value="Maturín - Nutrición y Dietética">Maturín - Nutrición y Dietética</option>
+                    <option class="Maturín" value="Maturín - Citotecnología">Maturín - Citotecnología</option>
+                    <option class="Maturín" value="Maturín - Odontología">Maturín - Odontología</option>
+                    <option class="Maturín" value="Maturín - Economía">Maturín - Economía</option>
+                    <option class="Maturín" value="Maturín - Contaduría Pública">Maturín - Contaduría Pública</option>
+                    <option class="Maturín" value="Maturín - Administración Comercial">Maturín - Administración Comercial</option>
+                    <option class="Maturín" value="Maturín - Ingeniería en Informática">Maturín - Ingeniería en Informática</option>
+                    <!-- Valle de la Pascua -->
+                    <option class="Valle de la Pascua" value="Valle de la Pascua - Medicina">Valle de la Pascua - Medicina</option>
+                    <option class="Valle de la Pascua" value="Valle de la Pascua - Enfermería">Valle de la Pascua - Enfermería</option>
+                    <option class="Valle de la Pascua" value="Valle de la Pascua - Administración Comercial">Valle de la Pascua - Administración Comercial</option>
+                    <option class="Valle de la Pascua" value="Valle de la Pascua - Contaduría Pública">Valle de la Pascua - Contaduría Pública</option>
+                    <option class="Valle de la Pascua" value="Valle de la Pascua - Economía">Valle de la Pascua - Economía</option>
+                    <!-- Mapire -->
+                    <option class="Mapire" value="Mapire - Ingeniería Agronómica de Producción Animal">Mapire - Ingeniería Agronómica de Producción Animal</option>
+                    <option class="Mapire" value="Mapire - Ingeniería Agronómica de Producción Vegetal">Mapire - Ingeniería Agronómica de Producción Vegetal</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Crear cuenta</button>
+            <button type="button" class="submit-btn" onclick="window.location.href = 'index.html';">Iniciar sesión</button>
+        </form>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

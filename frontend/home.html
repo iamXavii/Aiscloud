@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Usuario - Repositorio de Tesis</title>
+    <link rel="stylesheet" href="style/home.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- Logo de la Universidad -->
+            <img src="img/unerg.png" alt="Logo Universidad UNERG" class="logo">
+            <h2>Bienvenido, <span id="username"></span></h2>
+            <button onclick="cerrarSesion()" class="btn btn-logout">Cerrar sesión</button>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Buscar por título, autor, año o palabra clave" class="search-input">
+            <select id="filterFacultad" class="filter-select">
+                <option value="">Todas las facultades</option>
+                <option value="Ingeniería">Ingeniería</option>
+                <option value="Medicina">Medicina</option>
+                <option value="Derecho">Derecho</option>
+                <!-- Agrega más facultades aquí -->
+            </select>
+            <button onclick="buscarTesis()" class="btn btn-search">Buscar</button>
+        </div>
+
+        <div class="tesis-container">
+            <table class="tesis-table" id="tablaTesis">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Carrera</th>
+                        <th>Año</th>
+                        <th>Palabras clave</th>
+                        <th>Descripción</th>
+                        <th>Archivo</th>
+                    </tr>
+                </thead>
+                <tbody id="contenidoTabla">
+                    <!-- Datos dinámicos -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="home.js"> </script>
+</body>
+</html>
